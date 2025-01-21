@@ -54,14 +54,6 @@ channel: stable
 repo: fluidd-core/fluidd
 path: ~/fluidd
 
-[update_manager sonar]
-type: git_repo
-path: ~/sonar
-origin: https://github.com/mainsail-crew/sonar.git
-primary_branch: main
-managed_services: sonar
-install_script: tools/install.sh
-
 [update_manager cartographer]
 type: git_repo
 path: ~/cartographer-klipper
@@ -71,18 +63,3 @@ is_system_service: False
 managed_services: klipper
 info_tags:
   desc=Cartographer Probe
-[update_manager mobileraker]
-install_script: /home/grearson/mobileraker_companion/scripts/install.sh
-requirements: /home/grearson/mobileraker_companion/scripts/mobileraker-requirements.txt
-env: /home/grearson/mobileraker-env/bin/python
-managed_services: mobileraker
-primary_branch: main
-origin: https://github.com/Clon1998/mobileraker_companion.git
-path: /home/grearson/mobileraker_companion
-type: git_repo
-[update_manager klipper-backup]
-type: git_repo
-path: ~/klipper-backup
-origin: https://github.com/Staubgeborener/klipper-backup.git
-managed_services: moonraker
-primary_branch: main
